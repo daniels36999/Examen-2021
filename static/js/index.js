@@ -3,7 +3,7 @@
 var1=" ";
 //var2=" ";
 //FUNCION DEL BOTON ENCENDER - 1
-function LED1_On() {
+function LED1_On(){
 	message = new Paho.MQTT.Message("SENSOR1");
 	message.destinationName = "dyautibug.fie@unach.edu.ec/test1";
 	client.send(message); 
@@ -25,7 +25,7 @@ function Exportar1(){
 	message.destinationName ="dyautibug.fie@unach.edu.ec/test1";
 	client.send(message);
 	console.log("MUESTRA HISTORIAL");
-	var="H1";
+	var1="H1";
 }
 
 
