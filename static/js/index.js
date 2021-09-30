@@ -1,6 +1,6 @@
 //https://www.eclipse.org/paho/clients/js/
 //document.getElementById("sensor1").innerHTML="LED1 ENCENDIDO";
-//var1=" ";
+var1=" ";
 //var2=" ";
 //FUNCION DEL BOTON ENCENDER - 1
 function LED1_On() {
@@ -17,6 +17,15 @@ function LED2_On(){
 	client.send(message);
 	console.log("MUESTRA SENSOR 2");
 	//var2="H2";
+}
+
+//FUNCION DEL BOTON APAGAR - 1
+function Exportar1(){	
+	message = new Paho.MQTT.Message("HISTORIAL");
+	message.destinationName ="dyautibug.fie@unach.edu.ec/test1";
+	client.send(message);
+	console.log("MUESTRA HISTORIAL");
+	var="H1";
 }
 
 
@@ -71,15 +80,19 @@ function LED2_On(){
 	sms=(message.payloadString);
 	VectorDatos=sms.split(";")  
 	Npalabras =VectorDatos.length;
-	document.getElementById("sensor1").innerHTML="Sensor - 1: "+VectorDatos[0];
-	document.getElementById("sensor2").innerHTML="Sensor - 2: "+VectorDatos[1];
 	  
-	  if(Npalabras==3&&var1=="H1"){
-	  	document.getElementById("historial1").innerHTML=VectorDatos[2];
+	  if(sms=="Alta"||sms=="Baja"){
+	  	document.getElementById("sensor1").innerHTML="Temperatura: "+sms;
 	  }
-	  if(Npalabras==4&&var2=="H2"){
-	  	document.getElementById("historial2").innerHTML=VectorDatos[3];
+	  if(sms=="Vacio"&&sms=="Lleno"){
+	  	document.getElementById("sensor1").innerHTML="Temperatura: "+sms;	  
 	  }
+	  
+	  if(Npalabras==2&&var1=="H1"){
+		document.getElementById("historial1").innerHTML=VectorDatos[0];
+	  	document.getElementById("historial2").innerHTML=VectorDatos[1];
+	  }
+
 	
 	  
 //	Dividir = sms.split(" ");
@@ -102,45 +115,7 @@ function LED2_On(){
 	  
   }
 
-//EXPORTAR
-//----------------------------------------------------------------------------------
-//----------------------------------------------------------------------------------
-function Exportar1()
-{      
-    var textToWrite = document.getElementById("historial1").innerHTML;
-    var textFileAsBlob = new Blob([textToWrite], {type:'text/plain'});
-    var NombreGuardar = "Historial-S1.txt";
-    var downloadLink = document.createElement("a");
-    downloadLink.download = NombreGuardar;
-    downloadLink.innerHTML = "My Hidden Link";
-    window.URL = window.URL || window.webkitURL;
-    downloadLink.href = window.URL.createObjectURL(textFileAsBlob);
-    downloadLink.onclick = destroyClickedElement;
-    downloadLink.style.display = "none";
-    document.body.appendChild(downloadLink);
-    downloadLink.click();
-}
 
-function Exportar2()
-{      
-    var textToWrite = document.getElementById("historial2").innerHTML;
-    var textFileAsBlob = new Blob([textToWrite], {type:'text/plain'});
-    var NombreGuardar = "Historial-S2.txt";
-    var downloadLink = document.createElement("a");
-    downloadLink.download = NombreGuardar;
-    downloadLink.innerHTML = "My Hidden Link";
-    window.URL = window.URL || window.webkitURL;
-    downloadLink.href = window.URL.createObjectURL(textFileAsBlob);
-    downloadLink.onclick = destroyClickedElement;
-    downloadLink.style.display = "none";
-    document.body.appendChild(downloadLink);
-    downloadLink.click();
-}
- 
-function destroyClickedElement(event)
-{
-    document.body.removeChild(event.target);
-}
 //----------------------------------------------------------------------------------
 //----------------------------------------------------------------------------------
   
