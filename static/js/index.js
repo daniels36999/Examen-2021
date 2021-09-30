@@ -74,10 +74,10 @@ function LED2_On(){
 	document.getElementById("sensor1").innerHTML="Sensor - 1: "+VectorDatos[0];
 	document.getElementById("sensor2").innerHTML="Sensor - 2: "+VectorDatos[1];
 	  
-	  if(Npalabras>=3&&var1=="H1"){
+	  if(Npalabras==3&&var1=="H1"){
 	  	document.getElementById("historial1").innerHTML=VectorDatos[2];
 	  }
-	  if(Npalabras>=4&&var2=="H2"){
+	  if(Npalabras==4&&var2=="H2"){
 	  	document.getElementById("historial2").innerHTML=VectorDatos[3];
 	  }
 	
