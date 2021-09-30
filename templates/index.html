@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.1/mqttws31.js" type="text/javascript">		
+		</script>
+
+		<script src="/static/js/index.js">			
+		</script>
+		
+		<title>EMBEBIDOS</title>
+	</head>
+	<!-- CARATULA Y ENCABEZADO -->
+
+	<CENTER>
+		<h2 id='et1'>
+			UNIVERSIDAD NACIONAL DE CHIMBORAZO <br>
+		</h2>
+		
+		<h3
+			FACULTAD DE INGENIERIA <br>
+			<div align="center"><img id="imagen" src="https://www.unach.edu.ec/wp-content/uploads/2021/03/logo_unach_2021-02.png" alt="user" width="350"><br>
+			ELECTRONICA Y TELECOMUNCIONES <br><br>
+			DISPOSITIVOS EMBEBIDOS Y LAB.<br><br>		
+		</h3>
+	</CENTER>
+	
+	
+	
+	<!-- MENSAJES Y TITULOS -->
+	<hr />
+	<h2 style= 'margin-left: 50px'>
+	    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		MONITOR DE SENSORES:
+	</h2>
+
+	<!-- VALOR DE SENSOR -->
+
+	<h2 id="sensor1" style= 'margin-left: 170px'>
+		Sensor 1: 0.00
+	</h2>
+		
+	<h2 id="sensor2" style= 'margin-left: 170px'>
+		Sensor 2: 0.00
+	</h2>
+		
+	<h2 id="sensor3" style= 'margin-left: 170px'>
+		Sensor 3: 0.00
+	</h2>
+
+
+	<hr />
+	
+	<!-- CONTROL DE BOTONES -->
+	<h2 style= 'margin-left: 50px'>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		CONTROL - 1
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		CONTROL - 2 
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		CONTROL - 3
+		<br><br>
+		
+		<!-- BOTONES ENCENDIDO -->		
+		<button id = 'LED1On' type="button" style='width:200px; height:40px; background-color: #00FF00; margin-left: 50px' onclick="LED1_On();">
+			LED - 1 ON
+		</button>
+		
+		<button id = 'LED2On' type="button" style='width:200px; height:40px; background-color: #00FF00; margin-left: 50px' onclick="LED2_On();">
+			LED - 2 ON
+		</button>	
+		
+		<button id = 'LED3On' type="button" style='width:200px; height:40px; background-color: #00FF00; margin-left: 50px' onclick="LED3_On();">
+			LED - 3 ON
+		</button>
+		<br>
+		<br>
+		
+		<!-- BOTONES APAGADO -->	
+		<button id = 'LED1Off' type="button" style='width:200px; height:40px; background-color: #FF0000; margin-left: 50px' onclick="LED1_Off();">
+			LED - 1 OFF
+		</button>
+		
+		<button id = 'LED2Off' type="button" style='width:200px; height:40px; background-color: #FF0000; margin-left: 50px' onclick="LED2_Off();">
+			LED - 2 OFF
+		</button>
+
+		<button id = 'LED2Off' type="button" style='width:200px; height:40px; background-color: #FF0000; margin-left: 50px' onclick="LED3_Off();">
+			LED - 3 OFF
+		</button>
+	</h2>
+		
+	<!-- HISTORIAL -->
+	<hr />
+	<h2 style= 'margin-left: 50px'>
+	    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		HISTORIAL DE SENSORES:
+		<br><br>
+			
+	<!-- BOTONE HISTORIAL -->		
+		<button id = 'Historial1' type="button" style='width:200px; height:40px; background-color: #FFEB3B; margin-left: 50px' onclick="Histo1();">
+			MOSTRAR HISTORIAL
+		</button>
+		
+		<button id = 'Historial2' type="button" style='width:200px; height:40px; background-color: #FF7043; margin-left: 50px' onclick="Histo2();">
+			OCULTAR HISTORIAL
+		</button>
+		
+		<button id = 'Export' type="button" style='width:200px; height:40px; background-color: #F0FF00; margin-left: 50px' onclick="Exportar();">
+			EXPORTAR HISTORIAL
+		</button>
+	</h2>
+		
+	<hr />
+	<hr />
+		
+	<!-- VALOR DE SENSOR -->
+	<h2 id="historial">
+	Dispositivos Embebidos Historial.
+	</h2>
+		
+		
+	<!-- NOMBRE -->
+	<hr />
+	<hr />
+	<h3 style= 'margin-left: 50px'>
+		<br><br>ESTUDIANTES: &nbsp;&nbsp;&nbsp; Bravo Yandyr
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		Jacome Jaime
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		Romero Paul
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		Yautibug Daniel
+	</h3>
+
+	<script>
+	/*
+	function LED1_On() {
+		alert("led on");
+		console.log("led on");
+	  
+	}
+	function LED1_Off(){
+		alert("led off");
+		console.log("led off");
+	}
+	*/
+	</script>
+	</body>
+</html>
