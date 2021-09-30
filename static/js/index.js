@@ -82,10 +82,10 @@ function Exportar1(){
 	Npalabras =VectorDatos.length;
 	  
 	  if(sms=="Alta"||sms=="Baja"){
-	  	document.getElementById("sensor1").innerHTML="Temperatura: "+sms;
+	  	document.getElementById("sensor1").innerHTML=sms;
 	  }
 	  if(sms=="Vacio"||sms=="Lleno"){
-	  	document.getElementById("sensor2").innerHTML="Temperatura: "+sms;	  
+	  	document.getElementById("sensor2").innerHTML=sms;	  
 	  }
 	  
 	  if(Npalabras==2&&var1=="H1"){
