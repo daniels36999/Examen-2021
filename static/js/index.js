@@ -11,7 +11,7 @@ function LED1_On() {
 	var1="H1";
 }
 //FUNCION DEL BOTON APAGAR - 1
-function LED1_Off(){	
+function LED2_On(){	
 	message = new Paho.MQTT.Message("HISTORIAL2");
 	message.destinationName ="dyautibug.fie@unach.edu.ec/test1";
 	client.send(message);
