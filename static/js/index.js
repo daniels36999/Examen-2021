@@ -84,8 +84,8 @@ function Exportar1(){
 	  if(sms=="Alta"||sms=="Baja"){
 	  	document.getElementById("sensor1").innerHTML="Temperatura: "+sms;
 	  }
-	  if(sms=="Vacio"&&sms=="Lleno"){
-	  	document.getElementById("sensor1").innerHTML="Temperatura: "+sms;	  
+	  if(sms=="Vacio"||sms=="Lleno"){
+	  	document.getElementById("sensor2").innerHTML="Temperatura: "+sms;	  
 	  }
 	  
 	  if(Npalabras==2&&var1=="H1"){
