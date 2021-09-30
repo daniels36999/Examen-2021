@@ -1,22 +1,22 @@
 //https://www.eclipse.org/paho/clients/js/
 //document.getElementById("sensor1").innerHTML="LED1 ENCENDIDO";
-var1=" ";
-var2=" ";
+//var1=" ";
+//var2=" ";
 //FUNCION DEL BOTON ENCENDER - 1
 function LED1_On() {
-	message = new Paho.MQTT.Message("HISTORIAL1");
+	message = new Paho.MQTT.Message("SENSOR1");
 	message.destinationName = "dyautibug.fie@unach.edu.ec/test1";
 	client.send(message); 
-	console.log("MUESTRA HISTORIAL - 2");
-	var1="H1";
+	console.log("MUESTRA SENSOR 1");
+	//var1="H1";
 }
 //FUNCION DEL BOTON APAGAR - 1
 function LED2_On(){	
-	message = new Paho.MQTT.Message("HISTORIAL2");
+	message = new Paho.MQTT.Message("SENSOR2");
 	message.destinationName ="dyautibug.fie@unach.edu.ec/test1";
 	client.send(message);
-	console.log("MUESTRA HISTORIAL - 2");
-	var2="H2";
+	console.log("MUESTRA SENSOR 2");
+	//var2="H2";
 }
 
 
