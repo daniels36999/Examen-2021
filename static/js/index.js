@@ -55,7 +55,7 @@ function Exportar1(){
 	
     client.subscribe("dyautibug.fie@unach.edu.ec/test");
     message = new Paho.MQTT.Message("SE A CONECTADO A LA WEB EXITOSAMENTE");
-    message.destinationName = "dyautibug.fie@unach.edu.ec/test1";
+    message.destinationName = "dyautibug.fie@unach.edu.ec/test";
     client.send(message);
 	
   }
